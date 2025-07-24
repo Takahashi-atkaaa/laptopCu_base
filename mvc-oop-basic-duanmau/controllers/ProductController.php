@@ -1,27 +1,19 @@
 <?php
-// controllers/ProductController.php
-
-require_once './models/ProductModel.php'; // ✅ Đảm bảo model được nạp
-
+// có class chứa các function thực thi xử lý logic 
 class ProductController
 {
-    public $modelProduct;
+    public $modelProduct;//2. vao model
 
     public function __construct()
     {
-        // Nếu bạn cần kết nối database từ env.php:
-        require_once './env.php';
-        $this->modelProduct = new ProductModel($conn); // truyền kết nối DB nếu model cần
+        $this->modelProduct = new ProductModel();
     }
+
 
     public function Home()
     {
-        $title = "Đây là trang chủ nhé hahaa";
-        $thoiTiet = "Hôm nay trời có vẻ là mưa";
-
-        // Nếu có dữ liệu từ DB:
-        $products = $this->modelProduct->getAllProducts();
-
+      $HomeProduct=$this->modelProduct->getAllProduct();
+        
         require_once './views/trangchu.php';
     }
 }

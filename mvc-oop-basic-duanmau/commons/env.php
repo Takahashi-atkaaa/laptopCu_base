@@ -3,7 +3,7 @@
 // Biến môi trường, dùng chung toàn hệ thống
 // Khai báo dưới dạng HẰNG SỐ để không phải dùng $GLOBALS
 
-define('BASE_URL'       , 'http://localhost/duanmau/mvc-oop-basic/');
+define('BASE_URL'       , 'http://localhost/tunganh/du_an_mau/laptopCu_base/mvc-oop-basic-duanmau/');
 
 define('DB_HOST'    , 'localhost');
 define('DB_PORT'    , 3306);

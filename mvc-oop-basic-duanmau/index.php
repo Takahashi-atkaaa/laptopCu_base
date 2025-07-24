@@ -19,6 +19,30 @@ $act = $_GET['act'] ?? '/';
 
 match ($act) {
     // Trang chủ
-    '/'=>(new ProductController())->Home(),
+    '/'=>(new ProductController())->Home(),// 1.vao controller 
+
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+require_once './commons/env.php'; // Import thông tin cấu hình
+
+$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+
+// Kiểm tra kết nối
+if ($conn->connect_error) {
+    die("❌ Kết nối thất bại: " . $conn->connect_error);
+}
+echo "✅ Kết nối thành công đến database!";
+$conn->close();
+?>

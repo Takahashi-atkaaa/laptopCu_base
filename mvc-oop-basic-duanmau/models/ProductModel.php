@@ -9,11 +9,11 @@ class ProductModel
     }
 
     // Viết truy vấn danh sách sản phẩm 
-    public function getAllProduct()
+    public function getAllProduct()//vao db lay ds san pham
     {
+    
         $stmt = $this->conn->prepare("SELECT * FROM `Product`");
-        $stmt->execute();
-       return $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+        $stmt->execute();//phuong thuc thuc thi cau lenh truy van
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

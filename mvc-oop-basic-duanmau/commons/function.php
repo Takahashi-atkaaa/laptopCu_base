@@ -41,3 +41,9 @@ function deleteFile($file){
         unlink($pathDelete); // Hàm unlink dùng để xóa file
     }
 }
+function debug($data) {
+    echo '<pre>';
+    print_r($data);
+    echo '</pre>';
+    die();
+}
