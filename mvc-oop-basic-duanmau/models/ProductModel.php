@@ -11,6 +11,9 @@ class ProductModel
     // Viết truy vấn danh sách sản phẩm 
     public function getAllProduct()
     {
-        
+        $stmt = $this->conn->prepare("SELECT * FROM `Product`");
+        $stmt->execute();
+       return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
     }
 }
